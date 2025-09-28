@@ -1,3 +1,7 @@
-ascii_dict = {'0x30': '0', '0x40': '@', '0x50': 'P'} 
-reversed_dict = {value: key for key, value in ascii_dict.items()}
-print(reversed_dict)
+import csv
+csv_path = 'input.csv'
+with open(csv_path, 'r') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        if (row[1]) == 'OP02_010':
+            print(row[0])
